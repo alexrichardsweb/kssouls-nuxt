@@ -11,4 +11,8 @@ menu_pages:
       page_type: internal
       title: About
       page: pages-1
+  - Menu Item:
+      page_type: internal
+      title: Contact
+      page: pages-2
 ---

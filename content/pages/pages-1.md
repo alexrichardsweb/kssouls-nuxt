@@ -1,3 +1,3 @@
 ---
-page_title: Example Page 2
+page_title: "Example Page 2 "
 ---

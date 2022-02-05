@@ -10,4 +10,5 @@ menu_pages:
   - Menu Item:
       page_type: internal
       title: About
+      page: ""
 ---

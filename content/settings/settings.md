@@ -6,4 +6,8 @@ social:
   - social_media:
       title: Facebook
       link: https://www.facebook.com/karonr16
+menu_pages:
+  - Menu Item:
+      page_type: internal
+      title: About
 ---

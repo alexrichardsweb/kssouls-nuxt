@@ -10,9 +10,21 @@ menu_pages:
   - Menu Item:
       page_type: internal
       title: About
-      page: pages-1
+      page: about
+  - Menu Item:
+      page_type: internal
+      title: Videos
+      page: videos
+  - Menu Item:
+      page_type: internal
+      title: Shows
+      page: shows
   - Menu Item:
       page_type: internal
       title: Contact
-      page: pages-2
+      page: contact
+  - Menu Item:
+      page_type: external
+      title: Facebook
+      link: https://www.facebook.com/karonr16
 ---

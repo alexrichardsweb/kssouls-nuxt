@@ -2,18 +2,263 @@ backend:
   name: git-gateway
   repo: alexrichardsweb/kssouls-nuxt
   branch: main # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
+  local_backend: true
+#publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under images/uploads
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'Settings'
+    label: 'Site Settings'
+    folder: 'content/settings'
+    format: 'frontmatter'
+    slug: 'settings'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Site Settings Name', name: 'site_settings_name', widget: 'string', default: 'Site Settings' }
+      - { label: 'Site Name', name: 'site_name', widget: 'string' }
+      - { label: 'Logo', name: 'logo', widget: 'image' }
+      - label: 'Social'
+        name: 'social'
+        widget: list
+        fields:
+          - label: 'Social Media'
+            name: 'social_media'
+            widget: object
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+      - label: 'Menu Pages'
+        name: 'menu_pages'
+        widget: list
+        fields:
+          - label: 'Menu Item'
+            name: 'Menu Item'
+            widget: object
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - label: 'Page Type'
+                name: 'page_type'
+                widget: 'select'
+                default: 'internal'
+                options:
+                  - { label: "Site Page", value: "internal" }
+                  - { label: "External Link", value: "external" }
+              - { label: 'Link', name: 'link', widget: 'string', hint: 'If page type is an external link, enter it here', required: false }
+              - label: 'Page'
+                name: 'page'
+                widget: 'relation'
+                collection: 'Pages'
+                search_fields: ['title']
+                display_fields: ['title']
+                value_field: '{{slug}}'
+                hint: 'If page type is a site page, choose it here'
+                required: false
+  - name: 'Pages'
+    label: 'Pages'
+    folder: 'content/pages'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+  - name: 'Videos'
+    label: 'Videos'
+    folder: 'content/videos'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Video Description', name: 'video_description', widget: 'markdown' }
+      - label: "Video Type"
+        name: "video_type"
+        widget: "select"
+        options:
+          - { label: "Facebook", value: "facebook" }
+          - { label: "Youtube", value: "youtube" }
+      - { label: 'Video URL', name: 'video_url', widget: 'string' }
+
+  - name: 'Shows'
+    label: 'Shows'
+    folder: 'content/shows'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'show_description', widget: 'markdown', required: false }
+      - { label: 'Date and Time', name: 'show_date_time', widget: 'datetime', date_format: 'ddd Do MMMM YYYY' }
+      - { label: 'Event URL', hint: 'Link to Facebook event/festival website', name: 'show_url', widget: 'string', required: false }
+
+      - label: 'Location'
+        name: 'show_location'
+        widget: 'object'
+        fields:
+        - { label: 'Location Name', hint: 'Name of club/town or festival', name: 'location_name', widget: 'string' }
+        - { label: 'Location URL', hint: 'If the club/festival has a website of social media page put it here', name: 'location_url', widget: 'string', required: false }
+
+      - label: 'Tickets'
+        name: 'show_tickets'
+        widget: 'object'
+        fields:
+        - { label: 'Ticket Price', hint: 'Include currency e.g. £5', name: 'ticket_price', widget: 'string', required: false }
+        - { label: 'Ticket URL', hint: 'Add if tickets are available to buy online', name: 'ticket_url', widget: 'string', required: false }
+        - { label: 'Ticket Info', hint: 'Further info about tickets e.g. "Available on the door"',  name: 'ticket_info', widget: 'markdown', required: false }
+
+      - { label: 'Promo Video', name: 'show_video', widget: 'string', required: false }
+      - { label: 'Promo Image', name: 'show_image', widget: 'image', required: false }
+
+  - name: 'home'
+    label: 'Homepage'
+    folder: 'content/home'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - label: 'Banner'
+        name: 'banner'
+        widget: 'object'
+        fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Banner Text, name: banner_text, widget: string}
+
+      - label: 'Flexible Section'
+        name: 'sections'
+        widget: 'list'
+        types:
+
+        - label: 'Text Block'
+          name: 'text_block'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - { label: Text, name: text, widget: markdown }
+
+        - label: 'Image'
+          name: 'image'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - { label: Full Width, name: full_width, widget: boolean, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Cloudinary ID, name: cloudinary_id, widget: string, required: false }
+          - { label: Image Description, name: alt, widget: string }
+
+        - label: 'Image by Text'
+          name: 'image_by_text'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - { label: Text, name: text, widget: markdown }
+          - label: 'Image'
+            name: 'image'
+            widget: object
+            fields:
+            - { label: Image, name: image, widget: image, required: false }
+            - { label: Cloudinary ID, name: cloudinary_id, widget: string, required: false }
+            - { label: Image Description, name: alt, widget: string }
+          - label: 'Button'
+            name: 'button'
+            widget: object
+            fields:
+            - { label: Text, name: text, widget: string }
+            - { label: External Link, name: external_link, widget: boolean, required: false }
+            - { label: Link, name: link, widget: string }
+
+        - label: 'Carousel'
+          name: 'carousel'
+          widget: object
+          fields:
+          - label: 'Full Width'
+            name: 'full_width'
+            widget: boolean
+            default: false
+          - label: 'Slides'
+            name: 'slides'
+            widget: list
+            fields:
+            - { label: Text, name: text, widget: text }
+            - label: 'Image'
+              name: 'image'
+              widget: object
+              fields:
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Cloudinary ID, name: cloudinary_id, widget: string, required: false }
+              - { label: Image Description, name: alt, widget: string }
+            - label: 'Button'
+              name: 'button'
+              widget: object
+              fields:
+              - { label: Text, name: text, widget: string }
+
+        - label: 'Video'
+          name: 'video'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - { label: 'Youtube Embed', name: 'youtube_embed', widget: string }
+
+        - label: 'Contact Form'
+          name: 'contact_form'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - label: 'Form Title'
+            name: 'form_title'
+            widget: string
+            hint: 'Title above the contact form. Can be left blank.'
+          - label: 'Form Name'
+            name: 'form_name'
+            widget: string
+            hint: 'So you know which forms are being used. eg. Contact page or About page. (Not visible to user)'
+          - label: 'Button'
+            name: 'button'
+            widget: object
+            fields:
+            - { label: Text, name: text, widget: string }
+
+        - label: 'Image Gallery'
+          name: 'image_gallery'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - label: 'Gallery Items'
+            name: 'gallery_items'
+            widget: list
+            fields:
+            - { label: Image, name: image, widget: image }
+
+        - label: 'Featured Products'
+          name: 'featured_products'
+          widget: object
+          fields:
+          - { label: Extra Margin, name: extra_margin, widget: boolean, required: false }
+          - label: 'Button'
+            name: 'button'
+            widget: object
+            fields:
+            - { label: Text, name: text, widget: string }
+            - { label: External Link, name: external_link, widget: boolean, required: false }
+            - { label: Link, name: link, widget: string }
+          - label: 'Products'
+            name: 'products'
+            widget: list
+            fields:
+            - label: 'product'
+              name: 'product'
+              widget: 'relation'
+              collection: 'products'
+              search_fields: ["title"]
+              value_field: "products/{{slug}}"
+              display_fields: ["title"]

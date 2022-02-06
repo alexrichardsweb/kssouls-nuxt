@@ -2,7 +2,12 @@
   <div class="header bg-black c-white">
     <div class="header__main p-2">
       <div class="header__menu c-white">
-        Menu
+        <li
+          v-for="item in menuItems"
+          :key="item.title"
+        >
+          {{ item.title }}
+        </li>
       </div>
     </div>
     <div class="header__checkered bg-checkered" />
@@ -12,16 +17,20 @@
 <script>
 export default {
   props: {
-
-  },
-  async asyncData ({ $content }) {
-    const settings = await $content(`Settings`).fetch();
-    console.log(settings);
-    return { settings };
   },
   data () {
-    return {
-    };
+    return {};
+  },
+  computed: {
+    settings () {
+      return this.$store.state.settings;
+    },
+    menuItems () {
+      if (this.settings) {
+        return this.settings.menu_pages.map(page => page[`Menu Item`]);
+      }
+      return [];
+    },
   },
   mounted () {
   },

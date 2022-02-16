@@ -1,7 +1,7 @@
 ---
 site_settings_name: Site Settings
 site_name: Ka's Ska Souls
-logo: /static/images/uploads/logo_hq_cropped.png
+logo: ""
 social:
   - social_media:
       title: Facebook

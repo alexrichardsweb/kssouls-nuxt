@@ -21,6 +21,30 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: bebas-neue-pro;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/BebasNeueRegular.otf');
+  }
+
+  @font-face {
+    font-family: bebas-neue-pro;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('~assets/fonts/BebasNeueBold.otf');
+  }
+
+  @font-face {
+    font-family: bebas-neue-pro;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('~assets/fonts/BebasNeueLight.otf');
+  }
+
 /*
 *   Base font styles
 */

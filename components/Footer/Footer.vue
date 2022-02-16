@@ -22,7 +22,7 @@ export default {
 
   &__checkered {
     width: 100%;
-    height: 30px;
+    height: 26px;
   }
 }
 

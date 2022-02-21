@@ -1,7 +1,7 @@
 <template>
   <div class="footer bg-black c-white">
     <div class="footer__checkered bg-checkered" />
-    <div class="footer__main p-2">
+    <div class="footer__main p-1">
       <div class="footer__menu c-white">
         Menu
       </div>
@@ -22,7 +22,7 @@ export default {
 
   &__checkered {
     width: 100%;
-    height: 26px;
+    height: 20px;
   }
 }
 

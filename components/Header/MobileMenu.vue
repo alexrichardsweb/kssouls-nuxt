@@ -45,9 +45,10 @@ export default {
   bottom: 0;
   right: 0;
   left: 0;
-  top: 79px;
+  top: #{$headerHeightMobile};
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(100vh);
+  height: calc(100vh - #{$headerHeightMobile});
   &.open {
     animation: fade-in-menu .5s ease-out;
     opacity: 1;
@@ -61,6 +62,11 @@ export default {
     li {
       margin: 1rem 0;
       @include fontSize(24px);
+      list-style: none;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
     }
   }
 }
@@ -85,7 +91,7 @@ export default {
 @keyframes fade-in-menu {
     from {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(100vh);
     }
     to {
         opacity: 1;
@@ -100,7 +106,7 @@ export default {
     }
     to {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(100vh);
     }
 }
 

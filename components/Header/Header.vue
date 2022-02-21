@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     handleScroll (e) {
-      this.hasScrolled = window.scrollY >= 39;
+      this.hasScrolled = window.scrollY >= 120;
     },
   },
 };
@@ -108,6 +108,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 999;
+  max-height: #{$headerHeightMobile};
 
   &__main {
     display: flex;
@@ -177,20 +178,6 @@ export default {
       span:nth-child(3) {
         animation: ease .7s bottom-2 forwards;
       }
-      &:hover {
-        span:nth-child(1) {
-          width: calc(100% + .5rem);
-          margin-left: -.25rem;
-        }
-        span:nth-child(2) {
-          width: calc(100% - .5rem);
-          margin-left: .25rem;
-        }
-        span:nth-child(3) {
-          width: calc(100% + .5rem);
-          margin-left: -.25rem;
-        }
-      }
     }
 
   }
@@ -200,15 +187,19 @@ export default {
 
   .header {
     transition: .2s;
+    max-height: #{$headerHeightDesktop};
     &__menu {
       display: flex;
       @include fontSize(24px);
       li {
-        margin-left: 1.5rem;
+        margin-left: 2rem;
         position: relative;
         margin-top: 1px;
+        list-style: none;
         a {
           transition: .2s;
+          text-decoration: none;
+          color: #fff;
         }
         &:after {
           content: '';
@@ -238,7 +229,7 @@ export default {
 
     &.small {
       .header__logo {
-        width: 100px;
+        width: 90px;
       }
       .header__menu {
         @include fontSize(20px);

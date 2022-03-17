@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/about", (function(a){return {data:[{post:{slug:"about",title:"About",toc:[],body:{type:"root",children:[]},dir:"\u002Fpages",path:"\u002Fpages\u002Fabout",extension:".md",createdAt:a,updatedAt:a}}],fetch:{},mutations:[]}}("2022-02-06T14:07:48.353Z")));

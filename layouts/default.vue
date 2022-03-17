@@ -15,7 +15,15 @@ export default {
 <style lang="scss" scoped>
 
 main {
-  padding-top: 0;
+  padding-top: $headerHeightMobile;
+}
+
+@include breakpoint('landscape-tablet') {
+
+  main {
+    padding-top: $headerHeightDesktop;
+  }
+
 }
 
 </style>

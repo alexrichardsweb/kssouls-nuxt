@@ -16,6 +16,7 @@ $breakpoints: (
     'phone': 480px,
     'tablet': 640px,
     'landscape-tablet': 768px,
+    'article': $article,
     'small-laptop': 1000px,
     'desktop': 1232px,
     'large-desktop': 1366px,
@@ -49,11 +50,15 @@ $breakpoints: (
 .max-content-width {
     max-width: $content;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .max-article-width {
     max-width: $article;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     &--aside {
         max-width: calc(#{$article} - 1rem);
     }
@@ -63,4 +68,22 @@ $breakpoints: (
     .sidebar {
         max-width: calc(#{$content} - #{$article} - 1rem);
     }
+}
+
+@include breakpoint('article') {
+
+    .max-article-width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@include breakpoint('content') {
+
+    .max-content-width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }

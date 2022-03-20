@@ -76,4 +76,7 @@ sections:
       alt: Saxophone
   - type: video
     youtube_url: https://youtu.be/BBXjKKarWU4
+  - type: image
+    image: images/uploads/saxophone-g1a402f6c1_1920.jpg
+    alt: A big sax
 ---

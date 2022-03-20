@@ -74,4 +74,6 @@ sections:
     image:
       image: images/uploads/saxophone-g1a402f6c1_1920.jpg
       alt: Saxophone
+  - type: video
+    youtube_url: https://youtu.be/BBXjKKarWU4
 ---

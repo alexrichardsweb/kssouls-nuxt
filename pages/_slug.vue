@@ -1,10 +1,9 @@
 <template>
   <div class="post">
-    <!-- <About
-      v-if="post.slug === 'about'"
-      :post="post"
-    /> -->
-    <pre>{{ page }}</pre>
+    <FlexibleContent
+      v-if="page.sections.length"
+      :sections="page.sections"
+    />
   </div>
 </template>
 

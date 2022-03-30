@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <VideoBlock />
+  <div class="home max-content-width px-1">
+    Homepage
   </div>
 </template>
 

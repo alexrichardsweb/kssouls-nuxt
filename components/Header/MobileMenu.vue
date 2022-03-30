@@ -81,7 +81,7 @@ export default {
 
 @for $i from 1 through 8 {
   .menu.open ul {
-    $speed: calc(.5s + #{$i / 10}s + #{$i / 20}s);
+    $speed: calc(.5s + #{calc($i / 10)}s + #{calc($i / 20)}s);
     li:nth-of-type(#{$i}) {
       animation: fade-in-menu-items #{$speed} ease-in-out;
     }

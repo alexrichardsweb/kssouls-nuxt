@@ -5,11 +5,16 @@
   >
     <div class="header__main p-1 max-content-width">
       <div class="header__logo">
-        <img
-          :src="logo"
-          title="Ka's Ska Souls logo"
-          alt="Ka's Ska Souls logo"
+        <a
+          href="/"
+          title="Homepage"
         >
+          <img
+            :src="logo"
+            title="Ka's Ska Souls logo"
+            alt="Ka's Ska Souls logo"
+          >
+        </a>
       </div>
       <ul class="header__menu c-white ta-right">
         <li

@@ -1,5 +1,7 @@
 <template>
-  <div class="home" />
+  <div class="home">
+    <VideoBlock />
+  </div>
 </template>
 
 <script>

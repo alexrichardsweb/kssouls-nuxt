@@ -85,9 +85,7 @@ sections:
     alt: A big sax
   - type: video_gallery
     gallery_type: all
-    videos:
-      - geno
-      - medley
+    videos: []
   - type: video_gallery
     gallery_type: select
     videos:

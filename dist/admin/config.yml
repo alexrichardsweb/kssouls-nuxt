@@ -136,7 +136,7 @@ collections:
     create: true
     slug: '{{slug}}'
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - label: 'Content Blocks'
@@ -202,18 +202,9 @@ collections:
     create: true
     slug: '{{slug}}'
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
-      - label: 'Banner'
-        name: 'banner'
-        widget: 'object'
-        fields:
-        - {label: Image, name: image, widget: image}
-        - {label: Banner Text, name: banner_text, widget: string}
-
       - label: 'Content Blocks'
         name: 'sections'
         widget: 'list'

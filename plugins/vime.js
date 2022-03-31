@@ -6,6 +6,7 @@ import {
   Youtube,
   Dailymotion,
   ClickToPlay,
+  VolumeControl,
 
 } from '@vime/vue';
 import '@vime/core/themes/default.css';
@@ -16,3 +17,4 @@ Vue.component(`DefaultUi`, DefaultUi);
 Vue.component(`Youtube`, Youtube);
 Vue.component(`Dailymotion`, Dailymotion);
 Vue.component(`ClickToPlay`, ClickToPlay);
+Vue.component(`VolumeControl`, VolumeControl);

@@ -42,22 +42,25 @@ sections:
 
       <br>
 
+      <br>
+
+      <br>
+
       function baz(s) {<br>
+
+      <br>
        &nbsp;&nbsp;return foo + ':' + s;<br>
+      <br>
+
       }<br>
+
+      <br>
 
       </code></pre>
 
       <p>Or inline code like <code>var foo = 'bar';</code>.</p>
 
       <p>Or an image of bears</p>
-  - type: band_members
-    member:
-      - map-name-geoff-image-images-uploads-user-svg
-      - map-name-karon-image-images-uploads-user-svg
-      - map-name-glyn-image-images-uploads-user-svg
-      - map-name-neil-image-images-uploads-user-svg
-      - map-name-nigel-image-images-uploads-user-svg
   - type: image_by_text
     text: >-
       Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam
@@ -76,7 +79,18 @@ sections:
       alt: Saxophone
   - type: video
     youtube_url: https://youtu.be/BBXjKKarWU4
+    video: videos
   - type: image
     image: images/uploads/saxophone-g1a402f6c1_1920.jpg
     alt: A big sax
+  - type: video_gallery
+    gallery_type: all
+    videos:
+      - geno
+      - medley
+  - type: video_gallery
+    gallery_type: select
+    videos:
+      - videos
+      - one-step-beyond
 ---

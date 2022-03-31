@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/videos", (function(a){return {data:[{page:{slug:"videos",title:"Videos",sections:[{type:"text_block",text:"\u003Ch2\u003EMedley\u003C\u002Fh2\u003E"},{type:"video",video:"medley"}],toc:[],body:{type:"root",children:[]},dir:"\u002Fpages",path:"\u002Fpages\u002Fvideos",extension:".md",createdAt:a,updatedAt:a}}],fetch:{},mutations:[]}}("2022-03-30T19:42:59.062Z")));

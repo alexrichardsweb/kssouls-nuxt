@@ -61,22 +61,6 @@ sections:
       <p>Or inline code like <code>var foo = 'bar';</code>.</p>
 
       <p>Or an image of bears</p>
-  - type: image_by_text
-    text: >-
-      Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam
-      vehicula elementum sed sit amet dui. Donec sollicitudin molestie
-      malesuada. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet
-      quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui
-      posuere blandit.
-
-
-      Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.
-
-
-      Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-    image:
-      image: images/uploads/saxophone-g1a402f6c1_1920.jpg
-      alt: Saxophone
   - type: video
     youtube_url: https://youtu.be/BBXjKKarWU4
     video: videos

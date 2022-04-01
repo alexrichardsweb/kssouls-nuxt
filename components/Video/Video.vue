@@ -1,5 +1,8 @@
 <template>
   <div class="video">
+    {{ videoId }}
+    {{ videoType }}
+    {{ loadVideo }}
     <Player
       v-if="loadVideo"
       :ref="playerId"
@@ -44,10 +47,9 @@ export default {
   mounted () {
     this.$nextTick(() => {
       this.sleep(200).then(() => {
-        this.loadVideo = true; // Lazy load video to reduce page load errors
+        // this.loadVideo = true; // Lazy load video to reduce page load errors
         // this.$refs[this.playerId].pause(); // Stops autoplay...I think
         // https://github.com/vime-js/vime/issues/111
-        // Maybe look at plyr
       });
     });
   },

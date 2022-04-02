@@ -27,4 +27,8 @@ menu_pages:
       page_type: external
       title: Facebook
       link: https://www.facebook.com/karonr16
+  - Menu Item:
+      page_type: internal
+      title: Test Page
+      page: content-style-guide
 ---

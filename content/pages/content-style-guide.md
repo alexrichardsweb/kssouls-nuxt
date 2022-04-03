@@ -18,6 +18,12 @@ sections:
         Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus
         convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et,
         porttitor at sem. Donec sollicitudin molestie malesuada.</p>
+    right_block:
+      text: <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt.
+        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+        Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus
+        convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et,
+        porttitor at sem. Donec sollicitudin molestie malesuada.</p>
   - type: image_and_text
     text_block:
       width: 50

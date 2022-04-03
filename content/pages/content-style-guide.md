@@ -7,9 +7,7 @@ sections:
       text: >-
         <h2>Heading</h2>
 
-
         <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
 
         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
     right:
@@ -19,11 +17,10 @@ sections:
         convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et,
         porttitor at sem. Donec sollicitudin molestie malesuada.</p>
     right_block:
-      text: <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt.
-        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-        Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus
-        convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et,
-        porttitor at sem. Donec sollicitudin molestie malesuada.</p>
+      text: >-
+        <h2>Heading</h2>
+
+        <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.</p>
   - type: image_and_text
     text_block:
       width: 50

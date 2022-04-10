@@ -30,6 +30,7 @@ sections:
 
 
         <p>Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+      padding: 3
     image_block:
       image: images/uploads/saxophone-g1a402f6c1_1920.jpg
       alt: Saxomaphone
@@ -45,6 +46,7 @@ sections:
 
 
         <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      padding: 4
     image_block:
       image: images/uploads/5.jpg
       alt: Suzuki Escudo Pikes Peak Version

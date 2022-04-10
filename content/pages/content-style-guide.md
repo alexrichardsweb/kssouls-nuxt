@@ -51,5 +51,5 @@ sections:
       image: https://ucarecdn.com/7b8f1ccd-0e7e-4cc8-8dbe-511f70fcee0d/12471781_10153728953590465_3069196592784016819_o.jpg
       alt: Suzuki Escudo Pikes Peak Version
   - type: image
-    image: https://ucarecdn.com/60cffb8b-dffa-4d59-b86f-7e347b212e49/12487082_10153728953475465_2976978641411474112_o.jpg
+    image: https://ucarecdn.com/86e48981-8b9e-4ff0-8626-68e96d4b6772/-/resize/600x/11022528_10153185557375465_8752288085140926065_o.jpg
 ---

@@ -53,4 +53,7 @@ sections:
   - type: image
     image: https://ucarecdn.com/ef782e13-73a2-4d49-b78a-680b6575db2c/-/resize/1600x/10679744_10152644598765465_6883999179055781660_o.jpg
     alt: Central Park
+  - type: image
+    image: https://ucarecdn.com/29aeeddd-674b-4398-b66e-cbecd455539a/-/resize/1600x/10668876_10153101045170465_5514848362975542930_o.jpg
+    alt: Miami
 ---

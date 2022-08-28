@@ -34,4 +34,5 @@ gallery:
   - https://ucarecdn.com/adccc241-d9e9-4875-89dd-dbcbed367ddb/-/resize/1600x/65372481_2461892047204008_7419890663396737024_n.jpg
   - https://ucarecdn.com/9f92d007-4c64-4207-8082-171051383ade/-/resize/1600x/65375422_2452969944762885_8425230602017439744_n.jpg
   - https://ucarecdn.com/a186cf64-4b73-4644-a826-597af9be5511/-/resize/1600x/65489699_2461891920537354_5535559343795077120_n.jpg
+gallery_description: Ka's Ska Souls band members
 ---

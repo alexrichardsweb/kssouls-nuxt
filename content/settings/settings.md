@@ -1,7 +1,7 @@
 ---
 site_settings_name: Site Settings
 site_name: Ka's Ska Souls
-logo: https://ucarecdn.com/980a4f48-3c46-4ac2-9813-ab9368e8285a/-/resize/1600x/logo_hq_cropped_no_bg.png
+logo: https://ucarecdn.com/d19abb01-5b12-4fca-a8bd-c57143ce1419/-/resize/1600x/KSS.svg
 social:
   - social_media:
       title: Facebook
